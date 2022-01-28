@@ -20,7 +20,7 @@ jq . < $EVENT_PATH
 if jq '.commits[].message, .head_commit.message' < $EVENT_PATH | grep -i -q "$*";
 then
     # do something
-    VERSION='v2'
+    VERSION='2'
 
     DATA="$(printf '{"tag_name":"v%s",' $VERSION)"
     DATA="${DATA} $(printf '"target_commitish":"master",')"
