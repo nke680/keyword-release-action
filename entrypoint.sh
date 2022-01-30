@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo | http GET $1
+echo | https GET $1
 echo "Done"
 
 exit 0
